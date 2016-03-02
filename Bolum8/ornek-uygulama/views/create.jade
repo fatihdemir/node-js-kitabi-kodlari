@@ -1,0 +1,42 @@
+extends layout
+block content
+	div.container
+		div.content
+			h1 Yeni Kullanıcı Oluştur
+			hr
+			form.form-horizontal(action='/users/create',
+			method='POST')
+				div.form-group
+					label.col-sm-2.control-label(
+					for="ad-input") Ad
+					div.col-sm-10
+						input.form-control(
+						id="ad-input" 
+						name="ad" 
+						placeholder="Ad giriniz")
+				div.form-group
+					label.col-sm-2.control-label(
+					for="soyad-input") Soyad
+					div.col-sm-10
+						input.form-control(
+						id="soyad-input" name="soyad"
+						placeholder="Soyad giriniz")
+				div.form-group
+					label.col-sm-2.control-label(
+					for="dogumTarihi-input") Doğum Tarihi
+					div.col-sm-10
+						input.form-control(id="dogumTarihi-input" name="dogumtarihi" placeholder="Doğum tarihini DD/MM/YYYY formatında giriniz")
+				div.form-group
+					label.col-sm-2.control-label(
+					for="email-input") E-Posta
+					div.col-sm-10
+						input.form-control(
+						type="email"
+						id="email-input"
+						name="email"
+						placeholder="E-posta"+
+						"adresini giriniz")
+				div.form-group
+					div.col-sm-offset-2.col-sm-10
+						button.btn.btn-primary(
+						type="submit") Kullanıcı Ekle
